@@ -1,4 +1,5 @@
 #include <stdio.h>
+﻿#include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
@@ -83,6 +84,7 @@ void printBoard(chess_board* chess, time_t startTime) {
 int isWhite(char type) {
 	return isupper(type);   // Check if the piece is white
 }
+
 
 int pawn_moves(chess_board* chess, piece* p, int dest_y, int dest_x) {
 	int direction = isWhite(p->type) ? -1 : 1;     // If the selected pawn is white, the pawn should move up, otherwise down
@@ -277,4 +279,106 @@ int main() {
     printBoard(&game, gameStart);
 
     return 0;
+}
+
+// Returns:
+//   - 1 if the king is in check (under threat)
+
+
+int check_for_check(chess_board* chess, int is_white) {
+    int king_x = -1, king_y = -1;//felhanterings kod
+
+    // Locate the king of the given color on the board
+    for (int y = 0; y < 8; y++) {
+        for (int x = 0; x < 8; x++) {
+            piece* p = chess->board[y][x];
+            // If a piece exists and it's a king of the correct color
+            if (p != NULL && tolower(p->type) == 'k' && isWhite(p->type) == is_white) {
+                king_x = x;          // Save the x position of the king
+                king_y = y;          // Save the y position of the king
+                break;               // Exit inner loop once king is found
+            }
+        }
+    }
+
+    // If no king was found(felhantering i guess känns som vi kan lyckas tappa bort kungen)
+    if (king_x == -1 || king_y == -1) return 0;
+
+    // Loop through the entire board again to find opposing pieces
+    for (int y = 0; y < 8; y++) {
+        for (int x = 0; x < 8; x++) {
+            piece* attacker = chess->board[y][x];
+            // If there's a piece and it belongs to the opponent
+            if (attacker != NULL && isWhite(attacker->type) != is_white) {
+                // Check if this piece can move to the king's position
+                if (is_valid_move(chess, attacker, king_y, king_x)) {
+                    return 1; //king is in check
+                }
+            }
+        }
+    }
+
+    // No opponent piece can attack the king => king is not in check
+    return 0; //king is safe
+}
+int check_for_checkmate(chess_board* chess, int is_white) {
+    
+    if (!check_for_check(chess, is_white)) return 0; //king is not in check so returns
+
+    // Try every possible move by current player's pieces
+    for (int y = 0; y < 8; y++) {
+        for (int x = 0; x < 8; x++) {
+            piece* p = chess->board[y][x];
+            if (p != NULL && isWhite(p->type) == is_white) {
+                for (int dy = 0; dy < 8; dy++) {
+                    for (int dx = 0; dx < 8; dx++) {
+                        if (is_valid_move(chess, p, dy, dx)) {
+                            // Simulate move to check for a way to escape check
+                            piece* captured = chess->board[dy][dx];
+                            int old_x = p->x_coordinate;
+                            int old_y = p->y_coordinate;
+                            chess->board[old_y][old_x] = NULL;
+                            p->x_coordinate = dx;
+                            p->y_coordinate = dy;
+                            chess->board[dy][dx] = p;
+
+                            int still_in_check = check_for_check(chess, is_white);
+
+                            // Undo the move
+                            p->x_coordinate = old_x;
+                            p->y_coordinate = old_y;
+                            chess->board[old_y][old_x] = p;
+                            chess->board[dy][dx] = captured;
+
+                            if (!still_in_check) {
+                                return 0; // A move exists that gets out of check so no check mate ;)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    return 1; // No valid move gets out of check → checkmate and game over
+}
+
+
+int playerInput(char* input, int* from_y, int* from_x, int* to_y, int* to_x) {
+
+    //checks if input is correct (SQUARE OF STARTING PIECE Square to move to)
+    if (strlen(input) != 5 || input[2] != ' ') return 0;//failed becauase to many characters(add error message here)
+    //converts row letters to cordiantes
+    *from_x = input[0] - 'a';
+    *to_x = input[3] - 'a';
+
+    //number conversion from top row to bottom
+    *from_y = 8 - (input[1] - '0');
+    *to_y = 8 - (input[4] - '0');
+
+    //Checking that the cordinates are within the board
+    if (*from_x < 0 || *from_x > 7 || *from_y < 0 || *from_y > 7 ||
+        *to_x < 0 || *to_x > 7 || *to_y < 0 || *to_y > 7) return 0;//input failed
+
+    return 1;//Input was sucessfull
 }
