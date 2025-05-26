@@ -1,0 +1,1 @@
+arm-none-eabi-gdb ./build/nrf_test1.elf -x debugstuff.txt

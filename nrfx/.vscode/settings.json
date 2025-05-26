@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "list.h": "c",
+        "goodfuncs.h": "c",
+        "nrf.h": "c"
+    }
+}
