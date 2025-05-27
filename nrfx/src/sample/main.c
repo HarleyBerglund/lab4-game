@@ -1,6 +1,7 @@
 #include "goodFuncs.h"
 #include "chess.h"
 
+
 int main() {
     init_stuff();
 	int8_t clearscreen[] = CLEAR_SCREEN;
@@ -19,19 +20,29 @@ int main() {
 
     int white_won = 0;
     int black_won = 0;
+    int gametime = 300;
 
     char msg[100];
 
     do {
         print_board(&game);
 
-        strcpy(msg, "Enter move (e.g., 'e2 e4'): ");
+        if (turn_tracker) {
+            strcpy(msg, "White move");
+        } else {
+            strcpy(msg, "Black move");
+        }
+        
+	    uarte_write(msg, strlen(msg));
+
+        strcpy(msg, " (e.g., 'e2 e4'): ");
 	    uarte_write(msg, strlen(msg));
 
         read_string(input_buffer, 10);
 
         // Remove newline character
         input_buffer[strcspn(input_buffer, "\n")] = '\0';
+       
 
         if (turn_tracker) { //Whites turn
             if (parse_input(input_buffer, &current_y, &current_x, &destination_y, &destination_x)) {
@@ -86,4 +97,6 @@ int main() {
 
     return 0;
 }
+
+
 

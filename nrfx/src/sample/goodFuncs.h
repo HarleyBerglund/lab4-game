@@ -67,4 +67,5 @@ uint8_t get_buttton_press();
 int is_even(int num);
 void set_random_seed(void);
 int get_random_number(int upper, int lower);
+void timer(int *gametime);
 #endif

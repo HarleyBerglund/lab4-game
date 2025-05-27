@@ -1,4 +1,4 @@
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/src/sample/../../build/chess.c.o: \
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/sample/../../build/chess.c.o: \
  chess.c chess.h \
  C:/Apps/arm-toolchain/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
  C:/Apps/arm-toolchain/arm-none-eabi/include/stdlib.h \

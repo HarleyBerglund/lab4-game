@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+
 // Create a driver instance for UARTE:
 nrfx_uarte_t instance = NRFX_UARTE_INSTANCE(0);
 nrfx_rtc_t rtc_instance = NRFX_RTC_INSTANCE(0);
@@ -233,3 +234,10 @@ int is_even(int num){
         return 1;
     }
 }
+
+ void timer(int *gametime){
+    *gametime  =- (nrfx_rtc_counter_get(&rtc_instance)/32.768)/1000;
+}
+
+
+

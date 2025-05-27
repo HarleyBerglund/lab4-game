@@ -1,11 +1,11 @@
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/src/sample/../../build/main.c.o: \
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/sample/../../build/main.c.o: \
  main.c goodFuncs.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/include/nrfx_uarte.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/nrfx.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/src/sample/nrfx_config.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/src/nrfx_config_common.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/src/sample/nrfx_config_nrf5340_application.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/nrfx_common.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/include/nrfx_uarte.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/nrfx.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/sample/nrfx_config.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/nrfx_config_common.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/sample/nrfx_config_nrf5340_application.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/nrfx_common.h \
  C:/Apps/arm-toolchain/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
  C:/Apps/arm-toolchain/arm-none-eabi/include/stdint.h \
  C:/Apps/arm-toolchain/arm-none-eabi/include/machine/_default_types.h \
@@ -31,35 +31,37 @@ C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/src/sample/../../
  C:/Apps/arm-toolchain/lib/gcc/arm-none-eabi/13.2.1/include/syslimits.h \
  C:/Apps/arm-toolchain/arm-none-eabi/include/limits.h \
  C:/Apps/arm-toolchain/arm-none-eabi/include/sys/syslimits.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/nrf.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/nrf5340_application.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/CMSIS/Core/Include/core_cm33.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/CMSIS/Core/Include/cmsis_version.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/CMSIS/Core/Include/cmsis_compiler.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/CMSIS/Core/Include/cmsis_gcc.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/CMSIS/Core/Include/mpu_armv8.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/system_nrf5340_application.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/nrf5340_application_bitfields.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/nrf5340_application_name_change.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/compiler_abstraction.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/nrfx_utils.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/nrfx_utils_internal.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/nrf_peripherals.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/nrf5340_application_peripherals.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/nrfx_ext.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/src/nrfx_glue.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/hal/nrf_common.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/haly/nrfy_common.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/nrfx_errors.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/haly/nrfy_uarte.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/hal/nrf_uarte.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/nrf5340_application.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/include/nrfx_systick.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/hal/nrf_systick.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/hal/nrf_gpio.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/include/nrfx_rtc.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/haly/nrfy_rtc.h \
- C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/hal/nrf_rtc.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf5340_application.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/CMSIS/Core/Include/core_cm33.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/CMSIS/Core/Include/cmsis_version.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/CMSIS/Core/Include/cmsis_compiler.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/CMSIS/Core/Include/cmsis_gcc.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/CMSIS/Core/Include/mpu_armv8.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/system_nrf5340_application.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf5340_application_bitfields.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf5340_application_name_change.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/compiler_abstraction.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/nrfx_utils.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/nrfx_utils_internal.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf_peripherals.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf5340_application_peripherals.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/nrfx_ext.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/nrfx_glue.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/soc/nrfx_irqs.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/soc/nrfx_irqs_nrf5340_application.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_common.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/haly/nrfy_common.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/nrfx_errors.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/haly/nrfy_uarte.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_uarte.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf5340_application.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/include/nrfx_systick.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_systick.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_gpio.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/include/nrfx_rtc.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/haly/nrfy_rtc.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_rtc.h \
  C:/Apps/arm-toolchain/arm-none-eabi/include/stdlib.h \
  C:/Apps/arm-toolchain/arm-none-eabi/include/machine/stdlib.h \
  C:/Apps/arm-toolchain/arm-none-eabi/include/stdio.h \
@@ -67,12 +69,12 @@ C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/src/sample/../../
  C:/Apps/arm-toolchain/arm-none-eabi/include/sys/stdio.h \
  C:/Apps/arm-toolchain/arm-none-eabi/include/ctype.h chess.h
 goodFuncs.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/include/nrfx_uarte.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/nrfx.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/src/sample/nrfx_config.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/src/nrfx_config_common.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/src/sample/nrfx_config_nrf5340_application.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/nrfx_common.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/include/nrfx_uarte.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/nrfx.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/sample/nrfx_config.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/nrfx_config_common.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/sample/nrfx_config_nrf5340_application.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/nrfx_common.h:
 C:/Apps/arm-toolchain/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h:
 C:/Apps/arm-toolchain/arm-none-eabi/include/stdint.h:
 C:/Apps/arm-toolchain/arm-none-eabi/include/machine/_default_types.h:
@@ -98,35 +100,37 @@ C:/Apps/arm-toolchain/lib/gcc/arm-none-eabi/13.2.1/include/limits.h:
 C:/Apps/arm-toolchain/lib/gcc/arm-none-eabi/13.2.1/include/syslimits.h:
 C:/Apps/arm-toolchain/arm-none-eabi/include/limits.h:
 C:/Apps/arm-toolchain/arm-none-eabi/include/sys/syslimits.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/nrf.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/nrf5340_application.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/CMSIS/Core/Include/core_cm33.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/CMSIS/Core/Include/cmsis_version.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/CMSIS/Core/Include/cmsis_compiler.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/CMSIS/Core/Include/cmsis_gcc.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/CMSIS/Core/Include/mpu_armv8.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/system_nrf5340_application.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/nrf5340_application_bitfields.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/nrf5340_application_name_change.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/compiler_abstraction.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/nrfx_utils.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/nrfx_utils_internal.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/nrf_peripherals.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/nrf5340_application_peripherals.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/nrfx_ext.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/src/nrfx_glue.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/hal/nrf_common.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/haly/nrfy_common.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/nrfx_errors.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/haly/nrfy_uarte.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/hal/nrf_uarte.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/mdk/nrf5340_application.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/include/nrfx_systick.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/hal/nrf_systick.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/hal/nrf_gpio.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/drivers/include/nrfx_rtc.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/haly/nrfy_rtc.h:
-C:/Users/wwn24001/Downloads/lab4-game-main/lab4-game-main/nrfx/hal/nrf_rtc.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf5340_application.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/CMSIS/Core/Include/core_cm33.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/CMSIS/Core/Include/cmsis_version.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/CMSIS/Core/Include/cmsis_compiler.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/CMSIS/Core/Include/cmsis_gcc.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/CMSIS/Core/Include/mpu_armv8.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/system_nrf5340_application.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf5340_application_bitfields.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf5340_application_name_change.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/compiler_abstraction.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/nrfx_utils.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/nrfx_utils_internal.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf_peripherals.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf5340_application_peripherals.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/nrfx_ext.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/nrfx_glue.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/soc/nrfx_irqs.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/soc/nrfx_irqs_nrf5340_application.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_common.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/haly/nrfy_common.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/nrfx_errors.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/haly/nrfy_uarte.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_uarte.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf5340_application.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/include/nrfx_systick.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_systick.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_gpio.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/include/nrfx_rtc.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/haly/nrfy_rtc.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_rtc.h:
 C:/Apps/arm-toolchain/arm-none-eabi/include/stdlib.h:
 C:/Apps/arm-toolchain/arm-none-eabi/include/machine/stdlib.h:
 C:/Apps/arm-toolchain/arm-none-eabi/include/stdio.h:
