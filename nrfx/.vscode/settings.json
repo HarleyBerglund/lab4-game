@@ -2,6 +2,11 @@
     "files.associations": {
         "list.h": "c",
         "goodfuncs.h": "c",
-        "nrf.h": "c"
+        "nrf.h": "c",
+        "ctype.h": "c",
+        "chess.h": "c",
+        "nrfx_timer.h": "c",
+        "nrfx_config.h": "c",
+        "stdio.h": "c"
     }
 }

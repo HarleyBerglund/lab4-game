@@ -39,6 +39,7 @@ void starting_positions(chess_board* chess) {
         }
     }
 }
+
 void print_board(chess_board* chess) {
     char buffer[100];
     strcpy(buffer, "\n---- Chess Game ----\n\n\r");
