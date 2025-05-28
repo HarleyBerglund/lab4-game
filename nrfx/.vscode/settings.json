@@ -9,6 +9,8 @@
         "nrfx_config.h": "c",
         "stdio.h": "c",
         "stdbool.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "nrfx_systick.h": "c",
+        "nrfx_uarte.h": "c"
     }
 }

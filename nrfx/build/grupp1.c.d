@@ -1,5 +1,7 @@
-C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/sample/../../build/main.c.o: \
- main.c C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/nrfx.h \
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/sample/../../build/grupp1.c.o: \
+ grupp1.c grupp1.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/include/nrfx_uarte.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/nrfx.h \
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/sample/nrfx_config.h \
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/nrfx_config_common.h \
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/sample/nrfx_config_nrf5340_application.h \
@@ -51,14 +53,9 @@ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/sample/../../build/main.c.o: 
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_common.h \
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/haly/nrfy_common.h \
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/nrfx_errors.h \
- C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf5340_application.h \
- C:/Apps/arm-toolchain/arm-none-eabi/include/assert.h \
- C:/Apps/arm-toolchain/arm-none-eabi/include/stdio.h \
- C:/Apps/arm-toolchain/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
- C:/Apps/arm-toolchain/arm-none-eabi/include/sys/stdio.h grupp1.h \
- C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/include/nrfx_uarte.h \
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/haly/nrfy_uarte.h \
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_uarte.h \
+ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf5340_application.h \
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/include/nrfx_systick.h \
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_systick.h \
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_gpio.h \
@@ -67,6 +64,9 @@ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/sample/../../build/main.c.o: 
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_rtc.h \
  C:/Apps/arm-toolchain/arm-none-eabi/include/stdlib.h \
  C:/Apps/arm-toolchain/arm-none-eabi/include/machine/stdlib.h \
+ C:/Apps/arm-toolchain/arm-none-eabi/include/stdio.h \
+ C:/Apps/arm-toolchain/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
+ C:/Apps/arm-toolchain/arm-none-eabi/include/sys/stdio.h \
  C:/Apps/arm-toolchain/arm-none-eabi/include/ctype.h \
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/include/nrfx_gpiote.h \
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/haly/nrfy_gpiote.h \
@@ -74,6 +74,8 @@ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/sample/../../build/main.c.o: 
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/haly/nrfy_gpio.h \
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_gpio.h \
  C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_gpiote.h
+grupp1.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/include/nrfx_uarte.h:
 C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/nrfx.h:
 C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/sample/nrfx_config.h:
 C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/src/nrfx_config_common.h:
@@ -126,15 +128,9 @@ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/soc/nrfx_irqs_nrf5340_application
 C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_common.h:
 C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/haly/nrfy_common.h:
 C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/nrfx_errors.h:
-C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf5340_application.h:
-C:/Apps/arm-toolchain/arm-none-eabi/include/assert.h:
-C:/Apps/arm-toolchain/arm-none-eabi/include/stdio.h:
-C:/Apps/arm-toolchain/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h:
-C:/Apps/arm-toolchain/arm-none-eabi/include/sys/stdio.h:
-grupp1.h:
-C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/include/nrfx_uarte.h:
 C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/haly/nrfy_uarte.h:
 C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_uarte.h:
+C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/mdk/nrf5340_application.h:
 C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/include/nrfx_systick.h:
 C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_systick.h:
 C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_gpio.h:
@@ -143,6 +139,9 @@ C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/haly/nrfy_rtc.h:
 C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/hal/nrf_rtc.h:
 C:/Apps/arm-toolchain/arm-none-eabi/include/stdlib.h:
 C:/Apps/arm-toolchain/arm-none-eabi/include/machine/stdlib.h:
+C:/Apps/arm-toolchain/arm-none-eabi/include/stdio.h:
+C:/Apps/arm-toolchain/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h:
+C:/Apps/arm-toolchain/arm-none-eabi/include/sys/stdio.h:
 C:/Apps/arm-toolchain/arm-none-eabi/include/ctype.h:
 C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/drivers/include/nrfx_gpiote.h:
 C:/Users/wwn24001/Desktop/chess/lab4-game/nrfx/haly/nrfy_gpiote.h:

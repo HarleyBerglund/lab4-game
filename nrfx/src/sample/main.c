@@ -5,7 +5,7 @@
 #include <soc/nrfx_irqs.h>
 #include <nrf5340_application.h>
 #include <nrf_gpiote.h>
-#include <soc/nrfx_irqs.h>
+
 
 int main() {
     init_stuff();
