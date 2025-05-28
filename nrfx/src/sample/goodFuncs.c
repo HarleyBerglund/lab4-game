@@ -4,10 +4,11 @@
 #include <nrf5340_application.h>
 #include <nrfx_config.h>
 #include <nrf.h>
-
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+
+volatile int resign = 0;
 
 // Create a driver instance for UARTE:
 nrfx_uarte_t instance = NRFX_UARTE_INSTANCE(0);
@@ -57,32 +58,6 @@ bool read_string(char *str, size_t max_len)
     return true;
 }
 
-// Function to read a string via UART
-int read_int(void)
-{
-    // Buffer to store the received string
-    char buffer[100];
-    // Read a string via UART
-    read_string(buffer, sizeof(buffer));
-    // Converting the string to an int and returning it
-    return atoi(buffer);
-}
-
-// Function to send an int via UART
-bool send_int(uint64_t num)
-{
-    char transmitString[100];
-    int intLength = sprintf(transmitString, "%d", num);
-
-    if (intLength <= 0 || intLength >= sizeof(transmitString))
-    {
-        return false;
-    }
-
-    // Send the received string and in case of any error return false otherwise return true
-    nrfx_err_t err_code = nrfx_uarte_tx(&instance, transmitString, strlen(transmitString), 0);
-    return (err_code == NRFX_SUCCESS);
-}
 
 void init_uart(void)
 {
@@ -104,17 +79,14 @@ void init_uart(void)
 void init_gpio(void)
 {
     nrfx_systick_init();
-
     nrf_gpio_cfg_output(LED1);
     nrf_gpio_cfg_output(LED2);
     nrf_gpio_cfg_output(LED3);
     nrf_gpio_cfg_output(LED4);
-
     nrf_gpio_pin_write(LED1, LED_OFF);
     nrf_gpio_pin_write(LED2, LED_OFF);
     nrf_gpio_pin_write(LED3, LED_OFF);
     nrf_gpio_pin_write(LED4, LED_OFF);
-
     nrf_gpio_cfg_input(BUTTON1, NRF_GPIO_PIN_PULLUP);
     nrf_gpio_cfg_input(BUTTON2, NRF_GPIO_PIN_PULLUP);
     nrf_gpio_cfg_input(BUTTON3, NRF_GPIO_PIN_PULLUP);
@@ -136,108 +108,33 @@ void init_stuff(void)
     init_rtc();
 }
 
-int wait_for_any_button(void)
-{
-    const uint32_t buttons[BUTTON_COUNT] = {BUTTON1, BUTTON2, BUTTON3, BUTTON4};
-    int i = 0;
-    while (1)
-    {
-        i = (i + 1) % 4;
-        if (nrf_gpio_pin_read(buttons[i]) == 0)
-        {
-            return 1;
-        }
+
+void GPIOTE0_IRQHandler(void) {
+    if (NRF_GPIOTE0->EVENTS_IN[0]) {  // Check if event triggered
+        NRF_GPIOTE0->EVENTS_IN[0] = 0;  // Clear event
+        resign = 1;  // Resigns the game for the player whos current turn it is
     }
 }
 
-void toggle_leds(void)
-{
-    static uint8_t button1_state = 0;
-    static uint8_t button2_state = 0;
-    static uint8_t button3_state = 0;
-    static uint8_t button4_state = 0;
+void init_button_interrupt(void) {
+    // Configure button pin as input with pull-up resistor
+    NRF_P0->PIN_CNF[BUTTON1] = 
+        (GPIO_PIN_CNF_DIR_Input << GPIO_PIN_CNF_DIR_Pos) |
+        (GPIO_PIN_CNF_INPUT_Connect << GPIO_PIN_CNF_INPUT_Pos) |
+        (GPIO_PIN_CNF_PULL_Pullup << GPIO_PIN_CNF_PULL_Pos);
 
-    uint8_t new_button1_state = nrf_gpio_pin_read(BUTTON1);
-    uint8_t new_button2_state = nrf_gpio_pin_read(BUTTON2);
-    uint8_t new_button3_state = nrf_gpio_pin_read(BUTTON3);
-    uint8_t new_button4_state = nrf_gpio_pin_read(BUTTON4);
+    // Configure GPIOTE0 channel 0 for pin change interrupt
+    NRF_GPIOTE0->CONFIG[0] = 
+        (GPIOTE_CONFIG_MODE_Event << GPIOTE_CONFIG_MODE_Pos) |
+        (GPIOTE_CONFIG_POLARITY_HiToLo << GPIOTE_CONFIG_POLARITY_Pos) |
+        (BUTTON1 << GPIOTE_CONFIG_PSEL_Pos);
 
-    if (new_button1_state != button1_state)
-    {
-        button1_state = new_button1_state;
-        if (button1_state == 0)
-        {
-            nrf_gpio_pin_toggle(LED1);
-        }
-    }
-    if (new_button2_state != button2_state)
-    {
-        button2_state = new_button2_state;
-        if (button2_state == 0)
-        {
-            nrf_gpio_pin_toggle(LED2);
-        }
-    }
-    if (new_button3_state != button3_state)
-    {
-        button3_state = new_button3_state;
-        if (button3_state == 0)
-        {
-            nrf_gpio_pin_toggle(LED3);
-        }
-    }
-    if (new_button4_state != button4_state)
-    {
-        button4_state = new_button4_state;
-        if (button4_state == 0)
-        {
-            nrf_gpio_pin_toggle(LED4);
-        }
-    }
+    // Enable interrupt for GPIOTE0 channel 0
+    NRF_GPIOTE0->INTENSET = GPIOTE_INTENSET_IN0_Msk;
+
+    // Enable GPIOTE interrupt in NVIC
+    NVIC_EnableIRQ(GPIOTE0_IRQn);
+    NVIC_SetPriority(GPIOTE0_IRQn, 1);  // Set priority
 }
-
-void set_random_seed(void) {
-    int ticks;
-    // Sparar ett tick
-    ticks = nrfx_rtc_counter_get(&rtc_instance);
-    // använder tick för att randomisera 
-    srand(ticks);
-}
-
-uint8_t get_buttton_press() {
-    
-    static uint8_t button1_state = 0;
-    static uint8_t button2_state = 0;
-    static uint8_t button3_state = 0;
-    static uint8_t button4_state = 0;
-    wait_for_any_button();
-    set_random_seed();
-    uint8_t new_button1_state = nrf_gpio_pin_read(BUTTON1);
-    uint8_t new_button2_state = nrf_gpio_pin_read(BUTTON2);
-    uint8_t new_button3_state = nrf_gpio_pin_read(BUTTON3);
-    uint8_t new_button4_state = nrf_gpio_pin_read(BUTTON4);
-    if (new_button1_state == button1_state){ return 1; }
-    if (new_button2_state == button2_state){ return 2; }
-    if (new_button3_state == button3_state){ return 3; } 
-    if (new_button4_state == button4_state){ return 4; } 
-}
-
-int get_random_number(int lower, int upper) {
-    return((rand() % (upper - lower + 1)) + lower);
-    nrfx_rtc_counter_clear(&rtc_instance);
-}
-
-int is_even(int num){
-    if (num%2) {
-        return 0;
-    } else {
-        return 1;
-    }
-}
-
- void timer(int *gametime){
-    *gametime  =- (nrfx_rtc_counter_get(&rtc_instance)/32.768)/1000;
-}
-
 
 

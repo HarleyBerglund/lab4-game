@@ -52,20 +52,15 @@ LED 4       P0.31
 extern nrfx_uarte_t instance;
 extern uint8_t uarte_enabled;
 extern nrfx_rtc_t rtc_instance;
+extern volatile int resign;//imports the global varaible
 
 // Function declarations
 void uarte_write(uint8_t *data, uint8_t length);
 bool read_string(char *str, size_t max_len);
-int read_int(void);
-bool send_int(uint64_t num);
 void init_stuff(void);
 void init_uart(void);
 void init_gpio(void);
-int wait_for_any_button(void);
-void toggle_leds(void);
-uint8_t get_buttton_press();
-int is_even(int num);
-void set_random_seed(void);
-int get_random_number(int upper, int lower);
-void timer(int *gametime);
+void GPIOTE0_IRQHandler(void);
+void init_button_interrupt(void);
+void uart_event_handler(nrfx_uarte_event_t const *p_event, void *p_context);
 #endif
