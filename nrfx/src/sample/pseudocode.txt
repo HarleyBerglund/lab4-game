@@ -93,8 +93,6 @@ FUNCTION print_board(chess):
 END FUNCTION
 
 
-
-
 FUNCTION is_white(type):
 
     IF type = UPPERCASE:
