@@ -58,7 +58,6 @@ bool read_string(char *str, size_t max_len)
     return true;
 }
 
-
 void init_uart(void)
 {
     // Use default settings and specify our TX and RX pins:
@@ -108,23 +107,25 @@ void init_stuff(void)
     init_rtc();
 }
 
-
-void GPIOTE0_IRQHandler(void) {
-    if (NRF_GPIOTE0->EVENTS_IN[0]) {  // Check if event triggered
-        NRF_GPIOTE0->EVENTS_IN[0] = 0;  // Clear event
-        resign = 1;  // Resigns the game for the player whos current turn it is
+void GPIOTE0_IRQHandler(void)
+{
+    if (NRF_GPIOTE0->EVENTS_IN[0])
+    {                                  // Check if event triggered
+        NRF_GPIOTE0->EVENTS_IN[0] = 0; // Clear event
+        resign = 1;                    // Resigns the game for the player whos current turn it is
     }
 }
 
-void init_button_interrupt(void) {
+void init_button_interrupt(void)
+{
     // Configure button pin as input with pull-up resistor
-    NRF_P0->PIN_CNF[BUTTON1] = 
+    NRF_P0->PIN_CNF[BUTTON1] =
         (GPIO_PIN_CNF_DIR_Input << GPIO_PIN_CNF_DIR_Pos) |
         (GPIO_PIN_CNF_INPUT_Connect << GPIO_PIN_CNF_INPUT_Pos) |
         (GPIO_PIN_CNF_PULL_Pullup << GPIO_PIN_CNF_PULL_Pos);
 
     // Configure GPIOTE0 channel 0 for pin change interrupt
-    NRF_GPIOTE0->CONFIG[0] = 
+    NRF_GPIOTE0->CONFIG[0] =
         (GPIOTE_CONFIG_MODE_Event << GPIOTE_CONFIG_MODE_Pos) |
         (GPIOTE_CONFIG_POLARITY_HiToLo << GPIOTE_CONFIG_POLARITY_Pos) |
         (BUTTON1 << GPIOTE_CONFIG_PSEL_Pos);
@@ -134,7 +135,5 @@ void init_button_interrupt(void) {
 
     // Enable GPIOTE interrupt in NVIC
     NVIC_EnableIRQ(GPIOTE0_IRQn);
-    NVIC_SetPriority(GPIOTE0_IRQn, 1);  // Set priority
+    NVIC_SetPriority(GPIOTE0_IRQn, 1); // Set priority
 }
-
-
