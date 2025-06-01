@@ -358,7 +358,6 @@ int parse_input(char input[], int *from_y, int *from_x, int *to_y, int *to_x)
     // Check for correct input length and space in the middle
     if (strlen(input) < 5 || input[2] != ' ')
     {
-        printf("Invalid input format. Use format like 'e2 e4'.\n");
         return 0;
     }
 
@@ -374,7 +373,6 @@ int parse_input(char input[], int *from_y, int *from_x, int *to_y, int *to_x)
     if (*from_x < 0 || *from_x > 7 || *from_y < 0 || *from_y > 7 ||
         *to_x < 0 || *to_x > 7 || *to_y < 0 || *to_y > 7)
     {
-        printf("Coordinates out of range. Use a-h and 1-8.\n");
         return 0;
     }
 
